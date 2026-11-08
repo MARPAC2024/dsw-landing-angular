@@ -35,5 +35,20 @@ body {
 }
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+//html, body { height: 100%; }
+//body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+  font-family: 'FuenteDSW';
+  src: url('/assets/fonts/NexaBold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --bs-body-font-family: 'FuenteDSW', sans-serif;
+}
+body {
+  font-family: 'FuenteDSW', sans-serif;
+}
+
