@@ -1,1 +1,34 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <!-- Ahora con el logo del lobo -->
+    <a class="navbar-brand d-flex align-items-center gap-2" routerLink="/home">
+      <img src="/assets/img/Logo_BUAP_FCC.ico" alt="Logo BUAP FCC" width="34" height="34" class="rounded-circle">
+      <span>DSW</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+            aria-expanded="false" aria-label="Mostrar u ocultar el menú">
+      <span class="navbar-toggler-icon">
+      </span>
+    </button>
+    <div class="collapse navbar-collapse" id="menuPrincipal">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">
+            <i class="bi bi-house-door"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/perfil" routerLinkActive="active">
+            <i class="bi bi-person-circle"></i> Perfil
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/documentacion" routerLinkActive="active">
+            <i class="bi bi-book"></i> Documentación
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
