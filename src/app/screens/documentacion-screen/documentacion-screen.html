@@ -1,1 +1,50 @@
-<p>documentacion-screen works!</p>
+<section class="container py-4">
+  <h2 class="mb-4 fw-bold text-center">Documentación</h2>
+
+  <div #carruselElement
+       id="carruselTecnologias"
+       class="carousel slide rounded-3 shadow-lg overflow-hidden carrusel-contenedor"
+       data-bs-ride="carousel"[style.border]="'3px solid ' + colorActual"
+       [style.boxShadow]="'0 0 20px ' + colorActual + ', inset 0 0 10px ' + colorActual"
+  >
+
+    <div class="carousel-inner">
+      @for (d of diapositivas; track d.titulo) {
+        <div class="carousel-item" [class.active]="$first">
+          <!-- Imagen ocupando el 100% del ancho -->
+          <!-- <img [src]="d.imagen" [alt]="d.titulo"                                    height="220" class="d-block mx-auto"> -->
+          <!-- <img [src]="d.imagen" [alt]="d.titulo" [title]="d.titulo"                 height="220" class="d-block mx-auto"> -->
+          <!-- <img [src]="d.imagen" [alt]="d.titulo" alt="Logotipo tecnológico del carrusel" height="220" class="d-block mx-auto"> -->
+          <img [src]="d.imagen" [alt]="d.titulo"  alt="Logotipo tecnológico del carrusel" class="d-block w-80 carrusel-img">
+
+          <!-- Franja con el botón y enlace específico de cada tecnología -->
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-3 p-3 mb-2">
+            <h3 class="h4 fw-bold text-white mb-1">{{ d.titulo }}</h3>
+            <p class="text-light mb-2 small">{{ d.descripcion }}</p>
+            <a [href]="d.url"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-sm text-white fw-bold px-3 shadow-sm"
+               [style.background-color]="d.color"
+               [style.border-color]="d.color"
+               [style.box-shadow]="'0 0 12px ' + d.color">
+              <i class="bi bi-box-arrow-up-right me-1"></i> Ir a la documentación de {{ d.titulo }}
+            </a>
+          </div>
+        </div>
+      }
+    </div>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carruselTecnologias" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon">
+      </span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carruselTecnologias" data-bs-slide="next">
+      <span class="carousel-control-next-icon">
+      </span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+</section>

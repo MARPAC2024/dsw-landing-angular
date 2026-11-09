@@ -1,0 +1,57 @@
+.carrusel-contenedor {
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.carrusel-img {
+  width: 100%;
+  height: 480px; // Altura ideal para banners en desktop
+  object-fit: cover;
+  object-position: center 25%; // Centra la laptop y el logo 3D, desplazando el rótulo inferior
+  display: block;
+
+  @media (max-width: 768px) {
+    height: 220px; // Altura compacta para móviles
+  }
+}
+
+/*
+.carousel-caption {
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+*/
+
+.carousel-caption {
+  background: rgba(15, 23, 42, 0.85);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.75rem;
+  padding: 1rem 1.5rem;
+  /*
+  bottom: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  */
+
+  // Posicionamiento en esquina inferior izquierda
+  //left: 2rem;
+  //bottom: 2rem;
+  left: 0;
+  bottom: 0;
+  right: auto; // Cancela el límite derecho de Bootstrap
+  margin: 0;   // Cancela el centrado horizontal
+  text-align: left; // Alinea títulos y textos a la izquierda
+
+  max-width: 480px;
+  width: calc(100% - 4rem); // Para que no desborde en pantallas intermedias
+
+  @media (max-width: 768px) {
+    left: 1rem;
+    bottom: 1rem;
+    padding: 0.75rem 1rem;
+    width: calc(100% - 2rem);
+    max-width: none;
+  }
+
+}
