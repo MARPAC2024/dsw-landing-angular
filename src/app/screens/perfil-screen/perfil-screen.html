@@ -1,1 +1,21 @@
-<p>perfil-screen works!</p>
+<section class="container py-5">
+  <div class="card shadow-sm border-0">
+    <div class="row g-0 align-items-center">
+      <div class="col-md-4 text-center p-4">
+        <img src="assets/img/FotoPerfil.jpg" alt="Fotografía de perfil"
+             class="img-fluid rounded-circle shadow-sm" width="210">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body p-4">
+          <h2 class="card-title fw-bold text-primary mb-4">{{ perfil.nombre }}</h2>
+          <ul class="list-unstyled mb-0 fs-6">
+            <li class="mb-3"><i class="bi bi-envelope text-primary me-2"></i><strong>Correo:</strong> {{ perfil.email }}</li>
+            <li class="mb-3"><i class="bi bi-telephone text-primary me-2"></i><strong>Teléfono:</strong> {{ perfil.telefono }}</li>
+            <li class="mb-3"><i class="bi bi-geo-alt text-primary me-2"></i><strong>Dirección:</strong> {{ perfil.direccion }}</li>
+            <li class="mb-0"><i class="bi bi-calendar-event text-primary me-2"></i><strong>Fecha de Nacimiento:</strong> {{ perfil.nacimiento }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
